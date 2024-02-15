@@ -1,10 +1,10 @@
 function bloqueiaCaractere(input) {
-  var n = /[^0-9]/ | ["-"];
-  n.lastIndex = 0;
+  var n = /[^0-9-]/g; 
   if (n.test(input.value)) {
     input.value = "";
   }
 }
+
 
 function calculaRenda() {
   var inputsRenda = document.querySelectorAll('[id="renda"]');

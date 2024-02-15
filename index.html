@@ -2,23 +2,20 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, max-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário Ficha Socioeconômica</title>
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
+    <div class="container">
       <form class="formulario">
-        <fieldset class="cadastro">
-          <div id="printable">
+        <fieldset class="cadastro" id="printable">
+          <div >
             <h1>Formulário de Ficha Socioeconômica</h1>
             <p class="subtitulo">Processo de Bolsa Univille - CEBAS</p>
           </div>
-          <fieldset id="printable">
+          <fieldset >
             <div class="input">
               <label for="nome">Nome do Candidato:</label>
               <input type="text" name="nome" />
@@ -31,6 +28,7 @@
               <div class="input-checkbox">
                 <label for="turno">Turno:</label>
                 <input
+                  
                   type="radio"
                   value="mat"
                   id="mat"
@@ -38,6 +36,7 @@
                 />
                 <label for="mat"> Matutino </label>
                 <input
+                  
                   type="radio"
                   value="not"
                   id="not"
@@ -47,7 +46,7 @@
               </div>
             </div>
           </fieldset>
-          <fieldset id="printable">
+          <fieldset >
             <div class="input">
               <label for="endereco">Endereço:</label>
               <input type="text" />
@@ -65,42 +64,51 @@
               <input
                 type="tel"
                 placeholder="(00)00000-0000"
-                maxlength="14"
+                maxlength="12"
                 onkeyup="bloqueiaCaractere(this);"
                 autocomplete="tel"
                 pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
               />
             </div>
           </fieldset>
-          <fieldset id="printable">
-              <div class="input-checkbox">
-                <label>Situação da moradia:</label>
-                <input
-                  type="radio"
-                  value="propria"
-                  id="propria"
-                  name="moradia"
-                />
-                <label for="propria"> Própria </label>
-                <input type="radio" value="cedida" id="cedida" name="moradia" />
-                <label for="cedida"> Cedida </label>
-                <input
-                  type="radio"
-                  value="alugada"
-                  id="alugada"
-                  name="moradia"
-                />
-                <label for="alugada"> Alugada </label>
-                <input
-                  type="radio"
-                  value="financiada"
-                  id="financiada"
-                  name="moradia"
-                />
-                <label for="financiada"> Financiada </label>
-              </div>
+          <fieldset >
+            <div class="input-checkbox">
+              <label>Situação da moradia:</label>
+              <input
+                
+                type="radio"
+                value="propria"
+                id="propria"
+                name="moradia"
+              />
+              <label for="propria"> Própria </label>
+              <input
+                
+                type="radio"
+                value="cedida"
+                id="cedida"
+                name="moradia"
+              />
+              <label for="cedida"> Cedida </label>
+              <input
+                
+                type="radio"
+                value="alugada"
+                id="alugada"
+                name="moradia"
+              />
+              <label for="alugada"> Alugada </label>
+              <input
+                
+                type="radio"
+                value="financiada"
+                id="financiada"
+                name="moradia"
+              />
+              <label for="financiada"> Financiada </label>
+            </div>
           </fieldset>
-          <fieldset id="printable">
+          <fieldset >
             <p class="gfamiliar">Grupo Familiar:</p>
             <table>
               <thead>
@@ -168,7 +176,7 @@
                     </select>
                   </td>
                   <td>
-                    <input type="number" id="renda" oninput="calculaRenda()"/>
+                    <input type="number" id="renda" oninput="calculaRenda()" />
                   </td>
                 </tr>
                 <tr>
@@ -224,7 +232,7 @@
                     </select>
                   </td>
                   <td>
-                    <input type="number" id="renda" oninput="calculaRenda()"/>
+                    <input type="number" id="renda" oninput="calculaRenda()" />
                   </td>
                 </tr>
                 <tr>
@@ -280,7 +288,7 @@
                     </select>
                   </td>
                   <td>
-                    <input type="number" id="renda" oninput="calculaRenda()"/>
+                    <input type="number" id="renda" oninput="calculaRenda()" />
                   </td>
                 </tr>
                 <tr>
@@ -336,12 +344,12 @@
                     </select>
                   </td>
                   <td>
-                    <input type="number" id="renda" oninput="calculaRenda()"/>
+                    <input type="number" id="renda" oninput="calculaRenda()" />
                   </td>
                 </tr>
               </tbody>
             </table>
-            <hr>
+            <hr />
             <div class="input">
               <label>Valor da renda mensal bruta: R$</label>
               <input type="number" id="resultado" readonly />
@@ -351,47 +359,52 @@
               <input type="number" id="resultado2" readonly />
             </div>
           </fieldset>
-          <fieldset id="printable">
-              <div class="input-checkbox">
-                <label for="tipo_familia">Qual o tipo de família?</label>
-                <input
-                  type="radio"
-                  value="extensa"
-                  id="extensa"
-                  name="tipo_familia"
-                />
-                <label for="extensa"> Extensa </label>
-                <input
-                  type="radio"
-                  value="unipessoal"
-                  id="unipessoal"
-                  name="tipo_familia"
-                />
-                <label for="unipessoal"> Unipessoal </label>
-                <input
-                  type="radio"
-                  value="homoafetiva"
-                  id="homoafetiva"
-                  name="tipo_familia"
-                />
-                <label for="homoafetiva"> Homoafetiva </label>
-                <input
-                  type="radio"
-                  value="monoparental"
-                  id="monoparental"
-                  name="tipo_familia"
-                />
-                <label for="monoparental"> Monoparental </label>
-                <input
-                  type="radio"
-                  value="tnuclear"
-                  id="tnuclear"
-                  name="tipo_familia"
-                />
-                <label for="tnuclear"> Tradicional Nuclear </label>
-              </div>           
+          <fieldset >
+            <div class="input-checkbox">
+              <label for="tipo_familia">Qual o tipo de família?</label>
+              <input
+                
+                type="radio"
+                value="extensa"
+                id="extensa"
+                name="tipo_familia"
+              />
+              <label for="extensa"> Extensa </label>
+              <input
+                
+                type="radio"
+                value="unipessoal"
+                id="unipessoal"
+                name="tipo_familia"
+              />
+              <label for="unipessoal"> Unipessoal </label>
+              <input
+                
+                type="radio"
+                value="homoafetiva"
+                id="homoafetiva"
+                name="tipo_familia"
+              />
+              <label for="homoafetiva"> Homoafetiva </label>
+              <input
+                
+                type="radio"
+                value="monoparental"
+                id="monoparental"
+                name="tipo_familia"
+              />
+              <label for="monoparental"> Monoparental </label>
+              <input
+                
+                type="radio"
+                value="tnuclear"
+                id="tnuclear"
+                name="tipo_familia"
+              />
+              <label for="tnuclear"> Tradicional Nuclear </label>
+            </div>
           </fieldset>
-          <fieldset id="printable">
+          <fieldset >
             <div>
               <div class="input-checkbox">
                 <label for="nfamiliar"
@@ -399,6 +412,7 @@
                   culturais?</label
                 >
                 <input
+                  
                   type="radio"
                   value="sim_nfamiliar"
                   id="sim_nfamiliar"
@@ -406,6 +420,7 @@
                 />
                 <label for="sim_nfamiliar"> Sim </label>
                 <input
+                  
                   type="radio"
                   value="nao_nfamiliar"
                   id="nao_nfamiliar"
@@ -416,12 +431,19 @@
             </div>
           </fieldset>
 
-          <fieldset id="printable">
+          <fieldset >
             <div class="input-checkbox">
               <label for="tipo_nfamiliar">Se sim, qual/is?</label>
-              <input type="radio" value="rua" id="rua" name="tipo_nfamiliar" />
+              <input
+                
+                type="radio"
+                value="rua"
+                id="rua"
+                name="tipo_nfamiliar"
+              />
               <label for="rua"> Situação de Rua </label>
               <input
+                
                 type="radio"
                 value="indigena"
                 id="indigena"
@@ -429,6 +451,7 @@
               />
               <label for="indigena"> Indígena </label>
               <input
+                
                 type="radio"
                 value="quilombola"
                 id="quilombola"
@@ -443,6 +466,7 @@
               />
               <label for="ribeirinha"> Ribeirinha </label>
               <input
+                
                 type="radio"
                 value="imigrante"
                 id="imigrante"
@@ -450,6 +474,7 @@
               />
               <label for="imigrante"> Imigrante </label>
               <input
+                
                 type="radio"
                 value="migrante"
                 id="migrante"
@@ -458,15 +483,27 @@
               <label for="migrante"> Migrante </label>
             </div>
           </fieldset>
-          <fieldset id="printable">
+          <fieldset >
             <div>
               <div class="input-checkbox">
                 <label for="def"
                   >Possui pessoas com deficiência no grupo familiar?</label
                 >
-                <input type="radio" value="simdef" id="simdef" name="def" />
+                <input
+                  
+                  type="radio"
+                  value="simdef"
+                  id="simdef"
+                  name="def"
+                />
                 <label for="simdef"> Sim </label>
-                <input type="radio" value="naodef" id="naodef" name="def" />
+                <input
+                  
+                  type="radio"
+                  value="naodef"
+                  id="naodef"
+                  name="def"
+                />
                 <label for="naodef"> Não </label>
               </div>
               <div class="input">
@@ -478,6 +515,7 @@
                   >O grupo familiar está inscrito no Cadastro Único?</label
                 >
                 <input
+                  
                   type="radio"
                   value="sim_cadunico"
                   id="sim_cadunico"
@@ -485,6 +523,7 @@
                 />
                 <label for="sim_cadunico"> Sim </label>
                 <input
+                  
                   type="radio"
                   value="nao_cadunico"
                   id="nao_cadunico"
@@ -492,13 +531,14 @@
                 />
                 <label for="nao_cadunico"> Não </label>
               </div>
-              <hr>
+              <hr />
               <div class="input-checkbox">
                 <label for="transren"
                   >O grupo familiar tem acesso à algum benefício de
                   transferência de renda?</label
                 >
                 <input
+                  
                   type="radio"
                   value="sim_transren"
                   id="sim_transren"
@@ -506,6 +546,7 @@
                 />
                 <label for="sim_transren"> Sim </label>
                 <input
+                  
                   type="radio"
                   value="nao_transren"
                   id="nao_transren"
@@ -516,6 +557,7 @@
               <div class="input-checkbox">
                 <label for="tipo_beneficio">Qual?</label>
                 <input
+                  
                   type="radio"
                   value="bolsaf"
                   id="bolsaf"
@@ -523,6 +565,7 @@
                 />
                 <label for="bolsaf"> Bolsa família </label>
                 <input
+                  
                   type="radio"
                   value="prestacaocontinuada"
                   id="prestacaocontinuada"
@@ -532,13 +575,14 @@
                   Benefício de Prestação Continuada
                 </label>
                 <input
+                  
                   type="radio"
                   value="outros"
                   id="outros"
                   name="tipo_beneficio"
                 />
                 <label for="outros"> Outros </label>
-                <hr>
+                <hr />
               </div>
               <div class="input">
                 <label>Observações:</label>
@@ -549,18 +593,18 @@
               <script src="javascript.js"></script>
             </div>
           </fieldset>
-          <div class="container">
-            <a
-              class="button"
-              href="#"
-              onclick="window.print()"
-              id="imprimir"
-              type="submit"
-            >
-              Imprimir
-            </a>
-          </div>
         </fieldset>
+        <div class="botao">
+          <a
+            class="button"
+            href="#"
+            onclick="window.print()"
+            id="imprimir"
+            type="submit"
+          >
+            Imprimir
+          </a>
+        </div>
       </form>
     </div>
   </body>
