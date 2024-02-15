@@ -35,15 +35,16 @@ form h1 {
 }
 
 
-.input {
+.input input {
+  margin-top:10px;
   margin-bottom: 10px;
 }
 
 
 .input-checkbox {
-  display: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
   grid-template-columns: repeat(2, auto);
-  gap: 10px;
 }
 
 .input-checkbox label {
