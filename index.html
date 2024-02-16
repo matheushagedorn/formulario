@@ -2,7 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário Ficha Socioeconômica</title>
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css" />
@@ -10,601 +10,568 @@
   <body>
     <div class="container">
       <form class="formulario">
-        <fieldset class="cadastro" id="printable">
-          <div >
-            <h1>Formulário de Ficha Socioeconômica</h1>
-            <p class="subtitulo">Processo de Bolsa Univille - CEBAS</p>
-          </div>
-          <fieldset >
-            <div class="input">
-              <label for="nome">Nome do Candidato:</label>
-              <input type="text" name="nome" />
-            </div>
-            <div class="input">
-              <label for="curso">Curso:</label>
-              <input type="text" name="curso" />
-            </div>
+        <fieldset class="external">
+          <div id="printable">
             <div>
-              <div class="input-checkbox">
-                <label for="turno">Turno:</label>
-                <input
-                  
-                  type="radio"
-                  value="mat"
-                  id="mat"
-                  name="turno"
-                />
-                <label for="mat"> Matutino </label>
-                <input
-                  
-                  type="radio"
-                  value="not"
-                  id="not"
-                  name="turno"
-                />
-                <label for="not"> Noturno </label>
-              </div>
+              <h1>Formulário de Ficha Socioeconômica</h1>
+              <p class="subtitulo">Processo de Bolsa Univille - CEBAS</p>
             </div>
-          </fieldset>
-          <fieldset >
-            <div class="input">
-              <label for="endereco">Endereço:</label>
-              <input type="text" />
-            </div>
-            <div class="input">
-              <label for="bairro">Bairro:</label>
-              <input type="text" />
-            </div>
-            <div class="input">
-              <label for="cidade">Cidade:</label>
-              <input type="text" value="JOINVILLE (SC)" readonly />
-            </div>
-            <div class="input">
-              <label for="telefone">Telefone:</label>
-              <input
-                type="tel"
-                placeholder="(00)00000-0000"
-                maxlength="12"
-                onkeyup="bloqueiaCaractere(this);"
-                autocomplete="tel"
-                pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
-              />
-            </div>
-          </fieldset>
-          <fieldset >
-            <div class="input-checkbox">
-              <label>Situação da moradia:</label>
-              <input
-                
-                type="radio"
-                value="propria"
-                id="propria"
-                name="moradia"
-              />
-              <label for="propria"> Própria </label>
-              <input
-                
-                type="radio"
-                value="cedida"
-                id="cedida"
-                name="moradia"
-              />
-              <label for="cedida"> Cedida </label>
-              <input
-                
-                type="radio"
-                value="alugada"
-                id="alugada"
-                name="moradia"
-              />
-              <label for="alugada"> Alugada </label>
-              <input
-                
-                type="radio"
-                value="financiada"
-                id="financiada"
-                name="moradia"
-              />
-              <label for="financiada"> Financiada </label>
-            </div>
-          </fieldset>
-          <fieldset >
-            <p class="gfamiliar">Grupo Familiar:</p>
-            <table>
-              <thead>
-                <tr>
-                  <th>Nº</th>
-                  <th>Nome</th>
-                  <th>Idade</th>
-                  <th>Parentesco</th>
-                  <th>Estado Civil</th>
-                  <th>Ocupação</th>
-                  <th>Renda (R$)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>1</th>
-                  <td>
-                    <input type="text" />
-                  </td>
-                  <td>
-                    <input type="number" maxlength="99" />
-                  </td>
-                  <td>
-                    <select aria-label="select parentesco">
-                      <option selected>Selecione</option>
-                      <option value="1">Mãe</option>
-                      <option value="2">Pai</option>
-                      <option value="3">Padrasto</option>
-                      <option value="4">Madrasta</option>
-                      <option value="5">Irmão</option>
-                      <option value="6">Irmã</option>
-                      <option value="7">Avó</option>
-                      <option value="8">Avô</option>
-                      <option value="9">Tio(a)</option>
-                      <option value="10">Primo(a)</option>
-                      <option value="11">Cônjuge/Companheiro(a)</option>
-                      <option value="12">Filho(a)</option>
-                      <option value="12">Enteado(a)</option>
-                      <option value="12">Outro</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select aria-label="select estado civil">
-                      <option selected>Selecione</option>
-                      <option value="1">Solteiro</option>
-                      <option value="2">Casado</option>
-                      <option value="3">Separado</option>
-                      <option value="4">Divorciado</option>
-                      <option value="5">Viúvo</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select aria-label="select ocupação">
-                      <option selected>Selecione</option>
-                      <option value="1">Estudante</option>
-                      <option value="2">Estagiário(a)/Jovem aprendiz</option>
-                      <option value="3">Desempregado(a)</option>
-                      <option value="4">Seguro desemprego</option>
-                      <option value="5">Do lar</option>
-                      <option value="6">Assalariado(a)</option>
-                      <option value="7">Empresiário(a)/MEI</option>
-                      <option value="8">Autônomo(a)</option>
-                      <option value="9">Aposentado(a)/Pensionista</option>
-                      <option value="10">Outro</option>
-                    </select>
-                  </td>
-                  <td>
-                    <input type="number" id="renda" oninput="calculaRenda()" />
-                  </td>
-                </tr>
-                <tr>
-                  <th>2</th>
-                  <td>
-                    <input type="text" />
-                  </td>
-                  <td>
-                    <input type="number" maxlength="99" />
-                  </td>
-                  <td>
-                    <select aria-label="select parentesco">
-                      <option selected>Selecione</option>
-                      <option value="1">Mãe</option>
-                      <option value="2">Pai</option>
-                      <option value="3">Padrasto</option>
-                      <option value="4">Madrasta</option>
-                      <option value="5">Irmão</option>
-                      <option value="6">Irmã</option>
-                      <option value="7">Avó</option>
-                      <option value="8">Avô</option>
-                      <option value="9">Tio(a)</option>
-                      <option value="10">Primo(a)</option>
-                      <option value="11">Cônjuge/Companheiro(a)</option>
-                      <option value="12">Filho(a)</option>
-                      <option value="12">Enteado(a)</option>
-                      <option value="12">Outro</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select aria-label="select estado civil">
-                      <option selected>Selecione</option>
-                      <option value="1">Solteiro</option>
-                      <option value="2">Casado</option>
-                      <option value="3">Separado</option>
-                      <option value="4">Divorciado</option>
-                      <option value="5">Viúvo</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select aria-label="select ocupação">
-                      <option selected>Selecione</option>
-                      <option value="1">Estudante</option>
-                      <option value="2">Estagiário(a)/Jovem aprendiz</option>
-                      <option value="3">Desempregado(a)</option>
-                      <option value="4">Seguro desemprego</option>
-                      <option value="5">Do lar</option>
-                      <option value="6">Assalariado(a)</option>
-                      <option value="7">Empresiário(a)/MEI</option>
-                      <option value="8">Autônomo(a)</option>
-                      <option value="9">Aposentado(a)/Pensionista</option>
-                      <option value="10">Outro</option>
-                    </select>
-                  </td>
-                  <td>
-                    <input type="number" id="renda" oninput="calculaRenda()" />
-                  </td>
-                </tr>
-                <tr>
-                  <th>3</th>
-                  <td>
-                    <input type="text" />
-                  </td>
-                  <td>
-                    <input type="number" maxlength="99" />
-                  </td>
-                  <td>
-                    <select aria-label="select parentesco">
-                      <option selected>Selecione</option>
-                      <option value="1">Mãe</option>
-                      <option value="2">Pai</option>
-                      <option value="3">Padrasto</option>
-                      <option value="4">Madrasta</option>
-                      <option value="5">Irmão</option>
-                      <option value="6">Irmã</option>
-                      <option value="7">Avó</option>
-                      <option value="8">Avô</option>
-                      <option value="9">Tio(a)</option>
-                      <option value="10">Primo(a)</option>
-                      <option value="11">Cônjuge/Companheiro(a)</option>
-                      <option value="12">Filho(a)</option>
-                      <option value="12">Enteado(a)</option>
-                      <option value="12">Outro</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select aria-label="select estado civil">
-                      <option selected>Selecione</option>
-                      <option value="1">Solteiro</option>
-                      <option value="2">Casado</option>
-                      <option value="3">Separado</option>
-                      <option value="4">Divorciado</option>
-                      <option value="5">Viúvo</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select aria-label="select ocupação">
-                      <option selected>Selecione</option>
-                      <option value="1">Estudante</option>
-                      <option value="2">Estagiário(a)/Jovem aprendiz</option>
-                      <option value="3">Desempregado(a)</option>
-                      <option value="4">Seguro desemprego</option>
-                      <option value="5">Do lar</option>
-                      <option value="6">Assalariado(a)</option>
-                      <option value="7">Empresiário(a)/MEI</option>
-                      <option value="8">Autônomo(a)</option>
-                      <option value="9">Aposentado(a)/Pensionista</option>
-                      <option value="10">Outro</option>
-                    </select>
-                  </td>
-                  <td>
-                    <input type="number" id="renda" oninput="calculaRenda()" />
-                  </td>
-                </tr>
-                <tr>
-                  <th>4</th>
-                  <td>
-                    <input type="text" />
-                  </td>
-                  <td>
-                    <input type="number" maxlength="99" />
-                  </td>
-                  <td>
-                    <select aria-label="select parentesco">
-                      <option selected>Selecione</option>
-                      <option value="1">Mãe</option>
-                      <option value="2">Pai</option>
-                      <option value="3">Padrasto</option>
-                      <option value="4">Madrasta</option>
-                      <option value="5">Irmão</option>
-                      <option value="6">Irmã</option>
-                      <option value="7">Avó</option>
-                      <option value="8">Avô</option>
-                      <option value="9">Tio(a)</option>
-                      <option value="10">Primo(a)</option>
-                      <option value="11">Cônjuge/Companheiro(a)</option>
-                      <option value="12">Filho(a)</option>
-                      <option value="12">Enteado(a)</option>
-                      <option value="12">Outro</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select aria-label="select estado civil">
-                      <option selected>Selecione</option>
-                      <option value="1">Solteiro</option>
-                      <option value="2">Casado</option>
-                      <option value="3">Separado</option>
-                      <option value="4">Divorciado</option>
-                      <option value="5">Viúvo</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select aria-label="select ocupação">
-                      <option selected>Selecione</option>
-                      <option value="1">Estudante</option>
-                      <option value="2">Estagiário(a)/Jovem aprendiz</option>
-                      <option value="3">Desempregado(a)</option>
-                      <option value="4">Seguro desemprego</option>
-                      <option value="5">Do lar</option>
-                      <option value="6">Assalariado(a)</option>
-                      <option value="7">Empresiário(a)/MEI</option>
-                      <option value="8">Autônomo(a)</option>
-                      <option value="9">Aposentado(a)/Pensionista</option>
-                      <option value="10">Outro</option>
-                    </select>
-                  </td>
-                  <td>
-                    <input type="number" id="renda" oninput="calculaRenda()" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <hr />
-            <div class="input">
-              <label>Valor da renda mensal bruta: R$</label>
-              <input type="number" id="resultado" readonly />
-            </div>
-            <div class="input">
-              <label>Valor da renda mensal bruta por pessoa: R$</label>
-              <input type="number" id="resultado2" readonly />
-            </div>
-          </fieldset>
-          <fieldset >
-            <div class="input-checkbox">
-              <label for="tipo_familia">Qual o tipo de família?</label>
-              <input
-                
-                type="radio"
-                value="extensa"
-                id="extensa"
-                name="tipo_familia"
-              />
-              <label for="extensa"> Extensa </label>
-              <input
-                
-                type="radio"
-                value="unipessoal"
-                id="unipessoal"
-                name="tipo_familia"
-              />
-              <label for="unipessoal"> Unipessoal </label>
-              <input
-                
-                type="radio"
-                value="homoafetiva"
-                id="homoafetiva"
-                name="tipo_familia"
-              />
-              <label for="homoafetiva"> Homoafetiva </label>
-              <input
-                
-                type="radio"
-                value="monoparental"
-                id="monoparental"
-                name="tipo_familia"
-              />
-              <label for="monoparental"> Monoparental </label>
-              <input
-                
-                type="radio"
-                value="tnuclear"
-                id="tnuclear"
-                name="tipo_familia"
-              />
-              <label for="tnuclear"> Tradicional Nuclear </label>
-            </div>
-          </fieldset>
-          <fieldset >
-            <div>
-              <div class="input-checkbox">
-                <label for="nfamiliar"
-                  >O núcleo familiar possui especificidades sociais, étnicas ou
-                  culturais?</label
-                >
-                <input
-                  
-                  type="radio"
-                  value="sim_nfamiliar"
-                  id="sim_nfamiliar"
-                  name="nfamiliar"
-                />
-                <label for="sim_nfamiliar"> Sim </label>
-                <input
-                  
-                  type="radio"
-                  value="nao_nfamiliar"
-                  id="nao_nfamiliar"
-                  name="nfamiliar"
-                />
-                <label for="nao_nfamiliar"> Não </label>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset >
-            <div class="input-checkbox">
-              <label for="tipo_nfamiliar">Se sim, qual/is?</label>
-              <input
-                
-                type="radio"
-                value="rua"
-                id="rua"
-                name="tipo_nfamiliar"
-              />
-              <label for="rua"> Situação de Rua </label>
-              <input
-                
-                type="radio"
-                value="indigena"
-                id="indigena"
-                name="tipo_nfamiliar"
-              />
-              <label for="indigena"> Indígena </label>
-              <input
-                
-                type="radio"
-                value="quilombola"
-                id="quilombola"
-                name="tipo_nfamiliar"
-              />
-              <label for="quilombola"> Quilombola </label>
-              <input
-                type="radio"
-                value="ribeirinha"
-                id="ribeirinha"
-                name="tipo_nfamiliar"
-              />
-              <label for="ribeirinha"> Ribeirinha </label>
-              <input
-                
-                type="radio"
-                value="imigrante"
-                id="imigrante"
-                name="tipo_nfamiliar"
-              />
-              <label for="imigrante"> Imigrante </label>
-              <input
-                
-                type="radio"
-                value="migrante"
-                id="migrante"
-                name="tipo_nfamiliar"
-              />
-              <label for="migrante"> Migrante </label>
-            </div>
-          </fieldset>
-          <fieldset >
-            <div>
-              <div class="input-checkbox">
-                <label for="def"
-                  >Possui pessoas com deficiência no grupo familiar?</label
-                >
-                <input
-                  
-                  type="radio"
-                  value="simdef"
-                  id="simdef"
-                  name="def"
-                />
-                <label for="simdef"> Sim </label>
-                <input
-                  
-                  type="radio"
-                  value="naodef"
-                  id="naodef"
-                  name="def"
-                />
-                <label for="naodef"> Não </label>
+            <fieldset class="internal">
+              <div class="input">
+                <label for="nome">Nome do Candidato:</label>
+                <input type="text" name="nome" />
               </div>
               <div class="input">
-                <label>Se sim, Integrante e qual deficiência?</label>
-                <input type="text" />
-              </div>
-              <div class="input-checkbox">
-                <label for="cadunico"
-                  >O grupo familiar está inscrito no Cadastro Único?</label
-                >
-                <input
-                  
-                  type="radio"
-                  value="sim_cadunico"
-                  id="sim_cadunico"
-                  name="cadunico"
-                />
-                <label for="sim_cadunico"> Sim </label>
-                <input
-                  
-                  type="radio"
-                  value="nao_cadunico"
-                  id="nao_cadunico"
-                  name="cadunico"
-                />
-                <label for="nao_cadunico"> Não </label>
-              </div>
-              <hr />
-              <div class="input-checkbox">
-                <label for="transren"
-                  >O grupo familiar tem acesso à algum benefício de
-                  transferência de renda?</label
-                >
-                <input
-                  
-                  type="radio"
-                  value="sim_transren"
-                  id="sim_transren"
-                  name="transren"
-                />
-                <label for="sim_transren"> Sim </label>
-                <input
-                  
-                  type="radio"
-                  value="nao_transren"
-                  id="nao_transren"
-                  name="transren"
-                />
-                <label for="nao_transren"> Não </label>
-              </div>
-              <div class="input-checkbox">
-                <label for="tipo_beneficio">Qual?</label>
-                <input
-                  
-                  type="radio"
-                  value="bolsaf"
-                  id="bolsaf"
-                  name="tipo_beneficio"
-                />
-                <label for="bolsaf"> Bolsa família </label>
-                <input
-                  
-                  type="radio"
-                  value="prestacaocontinuada"
-                  id="prestacaocontinuada"
-                  name="tipo_beneficio"
-                />
-                <label for="prestacaocontinuada">
-                  Benefício de Prestação Continuada
-                </label>
-                <input
-                  
-                  type="radio"
-                  value="outros"
-                  id="outros"
-                  name="tipo_beneficio"
-                />
-                <label for="outros"> Outros </label>
-                <hr />
-              </div>
-              <div class="input">
-                <label>Observações:</label>
+                <label for="curso">Curso:</label>
+                <input type="text" name="curso" />
               </div>
               <div>
-                <textarea name="obs" cols="75" rows="5"></textarea>
+                <div class="input-checkbox">
+                  <label for="turno">Turno:</label>
+                  <input type="radio" value="mat" id="mat" name="turno" />
+                  <label for="mat"> Matutino </label>
+                  <input type="radio" value="not" id="not" name="turno" />
+                  <label for="not"> Noturno </label>
+                </div>
               </div>
-              <script src="javascript.js"></script>
+            </fieldset>
+            <fieldset class="internal">
+              <div class="input">
+                <label for="endereco">Endereço:</label>
+                <input type="text" />
+              </div>
+              <div class="input">
+                <label for="bairro">Bairro:</label>
+                <input type="text" />
+              </div>
+              <div class="input">
+                <label for="cidade">Cidade:</label>
+                <input type="text" value="JOINVILLE (SC)" readonly />
+              </div>
+              <div class="input">
+                <label for="telefone">Telefone:</label>
+                <input
+                  type="tel"
+                  placeholder="(00)00000-0000"
+                  maxlength="12"
+                  onkeyup="bloqueiaCaractere(this);"
+                  autocomplete="tel"
+                  pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
+                />
+              </div>
+            </fieldset>
+            <fieldset class="internal">
+              <div class="input-checkbox">
+                <label>Situação da moradia:</label>
+                <input
+                  type="radio"
+                  value="propria"
+                  id="propria"
+                  name="moradia"
+                />
+                <label for="propria"> Própria </label>
+                <input type="radio" value="cedida" id="cedida" name="moradia" />
+                <label for="cedida"> Cedida </label>
+                <input
+                  type="radio"
+                  value="alugada"
+                  id="alugada"
+                  name="moradia"
+                />
+                <label for="alugada"> Alugada </label>
+                <input
+                  type="radio"
+                  value="financiada"
+                  id="financiada"
+                  name="moradia"
+                />
+                <label for="financiada"> Financiada </label>
+              </div>
+            </fieldset>
+            <fieldset class="internal">
+              <p class="gfamiliar">Grupo Familiar:</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nº</th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Parentesco</th>
+                    <th>Estado Civil</th>
+                    <th>Ocupação</th>
+                    <th>Renda (R$)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td>
+                      <input type="number" maxlength="99" />
+                    </td>
+                    <td>
+                      <select aria-label="select parentesco">
+                        <option selected>Selecione</option>
+                        <option value="1">Mãe</option>
+                        <option value="2">Pai</option>
+                        <option value="3">Padrasto</option>
+                        <option value="4">Madrasta</option>
+                        <option value="5">Irmão</option>
+                        <option value="6">Irmã</option>
+                        <option value="7">Avó</option>
+                        <option value="8">Avô</option>
+                        <option value="9">Tio(a)</option>
+                        <option value="10">Primo(a)</option>
+                        <option value="11">Cônjuge/Companheiro(a)</option>
+                        <option value="12">Filho(a)</option>
+                        <option value="12">Enteado(a)</option>
+                        <option value="12">Outro</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select aria-label="select estado civil">
+                        <option selected>Selecione</option>
+                        <option value="1">Solteiro</option>
+                        <option value="2">Casado</option>
+                        <option value="3">Separado</option>
+                        <option value="4">Divorciado</option>
+                        <option value="5">Viúvo</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select aria-label="select ocupação">
+                        <option selected>Selecione</option>
+                        <option value="1">Estudante</option>
+                        <option value="2">Estagiário(a)/Jovem aprendiz</option>
+                        <option value="3">Desempregado(a)</option>
+                        <option value="4">Seguro desemprego</option>
+                        <option value="5">Do lar</option>
+                        <option value="6">Assalariado(a)</option>
+                        <option value="7">Empresiário(a)/MEI</option>
+                        <option value="8">Autônomo(a)</option>
+                        <option value="9">Aposentado(a)/Pensionista</option>
+                        <option value="10">Outro</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        id="renda"
+                        oninput="calculaRenda()"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td>
+                      <input type="number" maxlength="99" />
+                    </td>
+                    <td>
+                      <select aria-label="select parentesco">
+                        <option selected>Selecione</option>
+                        <option value="1">Mãe</option>
+                        <option value="2">Pai</option>
+                        <option value="3">Padrasto</option>
+                        <option value="4">Madrasta</option>
+                        <option value="5">Irmão</option>
+                        <option value="6">Irmã</option>
+                        <option value="7">Avó</option>
+                        <option value="8">Avô</option>
+                        <option value="9">Tio(a)</option>
+                        <option value="10">Primo(a)</option>
+                        <option value="11">Cônjuge/Companheiro(a)</option>
+                        <option value="12">Filho(a)</option>
+                        <option value="12">Enteado(a)</option>
+                        <option value="12">Outro</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select aria-label="select estado civil">
+                        <option selected>Selecione</option>
+                        <option value="1">Solteiro</option>
+                        <option value="2">Casado</option>
+                        <option value="3">Separado</option>
+                        <option value="4">Divorciado</option>
+                        <option value="5">Viúvo</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select aria-label="select ocupação">
+                        <option selected>Selecione</option>
+                        <option value="1">Estudante</option>
+                        <option value="2">Estagiário(a)/Jovem aprendiz</option>
+                        <option value="3">Desempregado(a)</option>
+                        <option value="4">Seguro desemprego</option>
+                        <option value="5">Do lar</option>
+                        <option value="6">Assalariado(a)</option>
+                        <option value="7">Empresiário(a)/MEI</option>
+                        <option value="8">Autônomo(a)</option>
+                        <option value="9">Aposentado(a)/Pensionista</option>
+                        <option value="10">Outro</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        id="renda"
+                        oninput="calculaRenda()"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td>
+                      <input type="number" maxlength="99" />
+                    </td>
+                    <td>
+                      <select aria-label="select parentesco">
+                        <option selected>Selecione</option>
+                        <option value="1">Mãe</option>
+                        <option value="2">Pai</option>
+                        <option value="3">Padrasto</option>
+                        <option value="4">Madrasta</option>
+                        <option value="5">Irmão</option>
+                        <option value="6">Irmã</option>
+                        <option value="7">Avó</option>
+                        <option value="8">Avô</option>
+                        <option value="9">Tio(a)</option>
+                        <option value="10">Primo(a)</option>
+                        <option value="11">Cônjuge/Companheiro(a)</option>
+                        <option value="12">Filho(a)</option>
+                        <option value="12">Enteado(a)</option>
+                        <option value="12">Outro</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select aria-label="select estado civil">
+                        <option selected>Selecione</option>
+                        <option value="1">Solteiro</option>
+                        <option value="2">Casado</option>
+                        <option value="3">Separado</option>
+                        <option value="4">Divorciado</option>
+                        <option value="5">Viúvo</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select aria-label="select ocupação">
+                        <option selected>Selecione</option>
+                        <option value="1">Estudante</option>
+                        <option value="2">Estagiário(a)/Jovem aprendiz</option>
+                        <option value="3">Desempregado(a)</option>
+                        <option value="4">Seguro desemprego</option>
+                        <option value="5">Do lar</option>
+                        <option value="6">Assalariado(a)</option>
+                        <option value="7">Empresiário(a)/MEI</option>
+                        <option value="8">Autônomo(a)</option>
+                        <option value="9">Aposentado(a)/Pensionista</option>
+                        <option value="10">Outro</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        id="renda"
+                        oninput="calculaRenda()"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <td>
+                      <input type="text" />
+                    </td>
+                    <td>
+                      <input type="number" maxlength="99" />
+                    </td>
+                    <td>
+                      <select aria-label="select parentesco">
+                        <option selected>Selecione</option>
+                        <option value="1">Mãe</option>
+                        <option value="2">Pai</option>
+                        <option value="3">Padrasto</option>
+                        <option value="4">Madrasta</option>
+                        <option value="5">Irmão</option>
+                        <option value="6">Irmã</option>
+                        <option value="7">Avó</option>
+                        <option value="8">Avô</option>
+                        <option value="9">Tio(a)</option>
+                        <option value="10">Primo(a)</option>
+                        <option value="11">Cônjuge/Companheiro(a)</option>
+                        <option value="12">Filho(a)</option>
+                        <option value="12">Enteado(a)</option>
+                        <option value="12">Outro</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select aria-label="select estado civil">
+                        <option selected>Selecione</option>
+                        <option value="1">Solteiro</option>
+                        <option value="2">Casado</option>
+                        <option value="3">Separado</option>
+                        <option value="4">Divorciado</option>
+                        <option value="5">Viúvo</option>
+                      </select>
+                    </td>
+                    <td>
+                      <select aria-label="select ocupação">
+                        <option selected>Selecione</option>
+                        <option value="1">Estudante</option>
+                        <option value="2">Estagiário(a)/Jovem aprendiz</option>
+                        <option value="3">Desempregado(a)</option>
+                        <option value="4">Seguro desemprego</option>
+                        <option value="5">Do lar</option>
+                        <option value="6">Assalariado(a)</option>
+                        <option value="7">Empresiário(a)/MEI</option>
+                        <option value="8">Autônomo(a)</option>
+                        <option value="9">Aposentado(a)/Pensionista</option>
+                        <option value="10">Outro</option>
+                      </select>
+                    </td>
+                    <td>
+                      <input
+                        type="number"
+                        id="renda"
+                        oninput="calculaRenda()"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <hr />
+              <div class="input">
+                <label>Valor da renda mensal bruta: R$</label>
+                <input type="number" id="resultado" readonly />
+              </div>
+              <div class="input">
+                <label>Valor da renda mensal bruta por pessoa: R$</label>
+                <input type="number" id="resultado2" readonly />
+              </div>
+            </fieldset>
+            <fieldset class="internal">
+              <div class="input-checkbox">
+                <label for="tipo_familia">Qual o tipo de família?</label>
+                <input
+                  type="radio"
+                  value="extensa"
+                  id="extensa"
+                  name="tipo_familia"
+                />
+                <label for="extensa"> Extensa </label>
+                <input
+                  type="radio"
+                  value="unipessoal"
+                  id="unipessoal"
+                  name="tipo_familia"
+                />
+                <label for="unipessoal"> Unipessoal </label>
+                <input
+                  type="radio"
+                  value="homoafetiva"
+                  id="homoafetiva"
+                  name="tipo_familia"
+                />
+                <label for="homoafetiva"> Homoafetiva </label>
+                <input
+                  type="radio"
+                  value="monoparental"
+                  id="monoparental"
+                  name="tipo_familia"
+                />
+                <label for="monoparental"> Monoparental </label>
+                <input
+                  type="radio"
+                  value="tnuclear"
+                  id="tnuclear"
+                  name="tipo_familia"
+                />
+                <label for="tnuclear"> Tradicional Nuclear </label>
+              </div>
+            </fieldset>
+            <fieldset class="internal">
+              <div>
+                <div class="input-checkbox">
+                  <label for="nfamiliar"
+                    >O núcleo familiar possui especificidades sociais, étnicas
+                    ou culturais?</label
+                  >
+                  <input
+                    type="radio"
+                    value="sim_nfamiliar"
+                    id="sim_nfamiliar"
+                    name="nfamiliar"
+                  />
+                  <label for="sim_nfamiliar"> Sim </label>
+                  <input
+                    type="radio"
+                    value="nao_nfamiliar"
+                    id="nao_nfamiliar"
+                    name="nfamiliar"
+                  />
+                  <label for="nao_nfamiliar"> Não </label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="internal">
+              <div class="input-checkbox">
+                <label for="tipo_nfamiliar">Se sim, qual/is?</label>
+                <input
+                  type="radio"
+                  value="rua"
+                  id="rua"
+                  name="tipo_nfamiliar"
+                />
+                <label for="rua"> Situação de Rua </label>
+                <input
+                  type="radio"
+                  value="indigena"
+                  id="indigena"
+                  name="tipo_nfamiliar"
+                />
+                <label for="indigena"> Indígena </label>
+                <input
+                  type="radio"
+                  value="quilombola"
+                  id="quilombola"
+                  name="tipo_nfamiliar"
+                />
+                <label for="quilombola"> Quilombola </label>
+                <input
+                  type="radio"
+                  value="ribeirinha"
+                  id="ribeirinha"
+                  name="tipo_nfamiliar"
+                />
+                <label for="ribeirinha"> Ribeirinha </label>
+                <input
+                  type="radio"
+                  value="imigrante"
+                  id="imigrante"
+                  name="tipo_nfamiliar"
+                />
+                <label for="imigrante"> Imigrante </label>
+                <input
+                  type="radio"
+                  value="migrante"
+                  id="migrante"
+                  name="tipo_nfamiliar"
+                />
+                <label for="migrante"> Migrante </label>
+              </div>
+            </fieldset>
+            <fieldset class="internal">
+              <div>
+                <div class="input-checkbox">
+                  <label for="def"
+                    >Possui pessoas com deficiência no grupo familiar?</label
+                  >
+                  <input type="radio" value="simdef" id="simdef" name="def" />
+                  <label for="simdef"> Sim </label>
+                  <input type="radio" value="naodef" id="naodef" name="def" />
+                  <label for="naodef"> Não </label>
+                </div>
+                <div class="input">
+                  <label>Se sim, Integrante e qual deficiência?</label>
+                  <input type="text" />
+                </div>
+                <div class="input-checkbox">
+                  <label for="cadunico"
+                    >O grupo familiar está inscrito no Cadastro Único?</label
+                  >
+                  <input
+                    type="radio"
+                    value="sim_cadunico"
+                    id="sim_cadunico"
+                    name="cadunico"
+                  />
+                  <label for="sim_cadunico"> Sim </label>
+                  <input
+                    type="radio"
+                    value="nao_cadunico"
+                    id="nao_cadunico"
+                    name="cadunico"
+                  />
+                  <label for="nao_cadunico"> Não </label>
+                </div>
+                <hr />
+                <div class="input-checkbox">
+                  <label for="transren"
+                    >O grupo familiar tem acesso à algum benefício de
+                    transferência de renda?</label
+                  >
+                  <input
+                    type="radio"
+                    value="sim_transren"
+                    id="sim_transren"
+                    name="transren"
+                  />
+                  <label for="sim_transren"> Sim </label>
+                  <input
+                    type="radio"
+                    value="nao_transren"
+                    id="nao_transren"
+                    name="transren"
+                  />
+                  <label for="nao_transren"> Não </label>
+                </div>
+                <div class="input-checkbox">
+                  <label for="tipo_beneficio">Qual?</label>
+                  <input
+                    type="radio"
+                    value="bolsaf"
+                    id="bolsaf"
+                    name="tipo_beneficio"
+                  />
+                  <label for="bolsaf"> Bolsa família </label>
+                  <input
+                    type="radio"
+                    value="prestacaocontinuada"
+                    id="prestacaocontinuada"
+                    name="tipo_beneficio"
+                  />
+                  <label for="prestacaocontinuada">
+                    Benefício de Prestação Continuada
+                  </label>
+                  <input
+                    type="radio"
+                    value="outros"
+                    id="outros"
+                    name="tipo_beneficio"
+                  />
+                  <label for="outros"> Outros </label>
+                  <hr />
+                </div>
+                <div class="input">
+                  <label>Observações:</label>
+                </div>
+                <div>
+                  <textarea name="obs" cols="75" rows="5"></textarea>
+                </div>
+                <script src="javascript.js"></script>
+              </div>
+            </fieldset>
+          </div>
+            <div class="botao">
+              <a
+                class="button"
+                href="#"
+                onclick="window.print()"
+                id="imprimir"
+                type="submit"
+              >
+                Imprimir
+              </a>
             </div>
-          </fieldset>
+          
         </fieldset>
-        <div class="botao">
-          <a
-            class="button"
-            href="#"
-            onclick="window.print()"
-            id="imprimir"
-            type="submit"
-          >
-            Imprimir
-          </a>
-        </div>
       </form>
     </div>
   </body>

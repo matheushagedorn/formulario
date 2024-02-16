@@ -31,12 +31,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #006341;
 }
 
 fieldset {
   border-radius: 5px;
   margin: 10px;
   padding: 15px;
+}
+
+.external {
+  background-color: #66a18d;
+}
+
+.internal {
+  background-color: #c1d9d1;
 }
 
 form h1 {
