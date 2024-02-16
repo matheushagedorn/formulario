@@ -16,9 +16,12 @@ function calculaRenda() {
       total += valor;
     }
   });
-  
-  var valorDividido = total / 2;
 
-  document.getElementById('resultado').value = total;
-  document.getElementById('resultado2').value = valorDividido;
+  var totalFormatado = total.toFixed(2);
+
+  var valorDividido = total / 2;
+  var valorDivididoFormatado = valorDividido.toFixed(2);
+
+  document.getElementById('resultado').value = totalFormatado;
+  document.getElementById('resultado2').value = valorDivididoFormatado;
 }
